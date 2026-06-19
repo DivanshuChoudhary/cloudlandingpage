@@ -5,7 +5,259 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CloudNova - Cloud Computing</title>
   <link rel="stylesheet" href="style.css">
-  
+  <style>
+    /* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b,#0f172a);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Navbar */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+}
+
+nav div{
+    font-size:30px;
+    font-weight:700;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* Hero */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px 8%;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+    line-height:1.2;
+}
+
+.hero p{
+    font-size:1.2rem;
+    color:#cbd5e1;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.hero-buttons button{
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.hero-buttons button:first-child{
+    background:#38bdf8;
+    color:white;
+}
+
+.hero-buttons button:last-child{
+    background:white;
+    color:#0f172a;
+}
+
+.hero-buttons button:hover{
+    transform:translateY(-5px);
+}
+
+/* Sections */
+
+section{
+    padding:100px 8%;
+}
+
+section h2{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+}
+
+/* Features */
+
+.feature-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.feature-box{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    padding:30px;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.feature-box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 30px rgba(56,189,248,.25);
+}
+
+.feature-box h3{
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+/* Pricing */
+
+.pricing-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.price-box{
+    background:rgba(255,255,255,0.05);
+    padding:40px;
+    text-align:center;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.price-box:hover{
+    transform:scale(1.05);
+    box-shadow:0 10px 30px rgba(56,189,248,.25);
+}
+
+.price-box h3{
+    font-size:28px;
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+.price-box p{
+    font-size:22px;
+    font-weight:600;
+}
+
+/* Contact */
+
+.contact form{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact input,
+.contact textarea{
+    padding:15px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background:rgba(255,255,255,0.08);
+    color:white;
+}
+
+.contact textarea{
+    height:150px;
+    resize:none;
+}
+
+.contact button{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#38bdf8;
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:rgba(255,255,255,0.05);
+    border-top:1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+}
+  </style>
 </head>
 <body>
     <body>
@@ -34,41 +286,121 @@
         </div>
     </div>
 </section>
-  <h2>Our Features</h2>
+ 
+ <section class="features">
+    <h2>Powerful Cloud Features</h2>
+    <p class="feature-subtitle">
+        Everything you need to run and scale your business in the cloud.
+    </p>
 
-  <div>
-    <h3>Fast Performance</h3>
-    <p>High-speed cloud servers.</p>
-  </div>
+    <div class="feature-container">
 
-  <div>
-    <h3>Secure Data</h3>
-    <p>Advanced encryption system.</p>
-  </div>
+        <div class="feature-box">
+            <div class="feature-icon">⚡</div>
+            <h3>Lightning Fast</h3>
+            <p>
+                High-performance cloud infrastructure designed for speed and reliability.
+            </p>
+        </div>
 
-  <div>
-    <h3>Global Access</h3>
-    <p>Access anywhere anytime.</p>
-  </div>
+        <div class="feature-box">
+            <div class="feature-icon">🔒</div>
+            <h3>Advanced Security</h3>
+            <p>
+                Enterprise-grade encryption and multi-layer protection for your data.
+            </p>
+        </div>
+
+        <div class="feature-box">
+            <div class="feature-icon">☁️</div>
+            <h3>Scalable Resources</h3>
+            <p>
+                Instantly scale storage, servers and computing power as you grow.
+            </p>
+        </div>
+
+        <div class="feature-box">
+            <div class="feature-icon">🌍</div>
+            <h3>Global Access</h3>
+            <p>
+                Access your applications from anywhere with worldwide cloud coverage.
+            </p>
+        </div>
+
+        <div class="feature-box">
+            <div class="feature-icon">📊</div>
+            <h3>Real-Time Analytics</h3>
+            <p>
+                Monitor usage, performance and business insights in real time.
+            </p>
+        </div>
+
+        <div class="feature-box">
+            <div class="feature-icon">🛠️</div>
+            <h3>24/7 Support</h3>
+            <p>
+                Dedicated technical support whenever your business needs help.
+            </p>
+        </div>
+
+    </div>
 </section>
 
-<section>
-  <h2>Pricing Plans</h2>
+<section class="pricing">
+    <h2>Choose Your Cloud Plan</h2>
+    <p class="pricing-subtitle">
+        Flexible plans designed for startups, businesses and enterprises.
+    </p>
 
-  <div>
-    <h3>Basic</h3>
-    <p>$5 / month</p>
-  </div>
+    <div class="pricing-container">
 
-  <div>
-    <h3>Pro</h3>
-    <p>$15 / month</p>
-  </div>
+        <div class="price-box">
+            <h3>Starter</h3>
+            <div class="price">$9<span>/month</span></div>
 
-  <div>
-    <h3>Enterprise</h3>
-    <p>$30 / month</p>
-  </div>
+            <ul>
+                <li>✔ 20 GB SSD Storage</li>
+                <li>✔ 1 Website</li>
+                <li>✔ Free SSL</li>
+                <li>✔ Email Support</li>
+            </ul>
+
+            <button>Get Started</button>
+        </div>
+
+        <div class="price-box popular">
+            <div class="badge">Most Popular</div>
+
+            <h3>Professional</h3>
+            <div class="price">$29<span>/month</span></div>
+
+            <ul>
+                <li>✔ 100 GB SSD Storage</li>
+                <li>✔ 10 Websites</li>
+                <li>✔ Free Domain</li>
+                <li>✔ Priority Support</li>
+                <li>✔ Daily Backups</li>
+            </ul>
+
+            <button>Choose Plan</button>
+        </div>
+
+        <div class="price-box">
+            <h3>Enterprise</h3>
+            <div class="price">$99<span>/month</span></div>
+
+            <ul>
+                <li>✔ Unlimited Storage</li>
+                <li>✔ Unlimited Websites</li>
+                <li>✔ Dedicated Server</li>
+                <li>✔ 24/7 Premium Support</li>
+                <li>✔ Advanced Security</li>
+            </ul>
+
+            <button>Contact Sales</button>
+        </div>
+
+    </div>
 </section>
 
 <section>
